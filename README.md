@@ -14,13 +14,21 @@ This action makes the testim.io cli available to your workflows
 
 ### `grid`
 
-**Required** The grid on which to execute the tests. Default `"Testim-Grid"`.
+The grid on which to execute the tests. Default `"Testim-Grid"`.
+
+### `suite`
+
+The test suite to run.
+
+### `base-url`
+
+Starting URL after browser opens.
 
 ## Example usage
 
 ```bash
-uses: instinctstudios/testim-cli-gh-action@v0.3.0
+uses: trax-retail/testim-cli-gh-action@v0.7.0
 with:
   token: ${{ secrets.TESTIM_TOKEN }}
-  project-id: <PROJECT_ID>
+  project: <PROJECT_ID>
 ```

@@ -14,7 +14,10 @@ inputs:
     default: "Testim-Grid"
   suite:
     description: 'The test suite to run'
-    required: true
+    required: false
+  base-url:
+    description: 'Starting URL after browser opens'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -23,3 +26,4 @@ runs:
     - ${{ inputs.project }}
     - ${{ inputs.grid }}
     - ${{ inputs.suite }}
+    - ${{ inputs.base-url }}
