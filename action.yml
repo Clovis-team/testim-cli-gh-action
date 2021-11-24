@@ -18,6 +18,22 @@ inputs:
   base-url:
     description: 'Starting URL after browser opens'
     required: false
+  result-label:
+    description: 'Textual label to the remote runs'
+    required: false
+  timeout:
+    description: 'Timeout period in milliseconds to abort the test run if a timeout has elapsed'
+    required: false
+  branch:
+    description: 'Branch (by name) to run the tests on'
+    required: false
+  parallel:
+    description: 'How many tests should run in parallel'
+    required: false
+    default: '1'
+  retries:
+    description: 'Max number of retries'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -27,3 +43,8 @@ runs:
     - ${{ inputs.grid }}
     - ${{ inputs.suite }}
     - ${{ inputs.base-url }}
+    - ${{ inputs.result-label }}
+    - ${{ inputs.timeout }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.parallel }}
+    - ${{ inputs.retries }}
