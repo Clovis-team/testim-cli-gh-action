@@ -32,10 +32,10 @@ inputs:
     required: false
     default: '1'
   retries:
-    description: 'Run specific tests that include the specified labels' 
+    description: 'Max number of retries'
     required: false
   label:
-    description: 'Max number of retries'
+    description: 'Run specific tests that include the specified labels' 
     required: false
 runs:
   using: 'docker'
