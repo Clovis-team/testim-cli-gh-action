@@ -37,6 +37,9 @@ inputs:
   label:
     description: 'Run specific tests that include the specified labels' 
     required: false
+  override-execution-name:
+    description: 'the name of the execution in Testim suite runs' 
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -52,3 +55,4 @@ runs:
     - ${{ inputs.parallel }}
     - ${{ inputs.retries }}
     - ${{ inputs.label }} 
+    - ${{ inputs.override-execution-name }}
