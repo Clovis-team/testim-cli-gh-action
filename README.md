@@ -44,6 +44,10 @@ How many tests should run in parallel.
 
 When this flag is used, a failed test will be executed repeatedly until either the test passes or the max number of retries has been reached - in which case the test will fail.
 
+### `label`
+
+Use this to run specific tests that include the specified labels
+
 ## Example usage
 
 ```bash
