@@ -32,6 +32,9 @@ inputs:
     required: false
     default: '1'
   retries:
+    description: 'Run specific tests that include the specified labels' 
+    required: false
+  label:
     description: 'Max number of retries'
     required: false
 runs:
@@ -48,3 +51,4 @@ runs:
     - ${{ inputs.branch }}
     - ${{ inputs.parallel }}
     - ${{ inputs.retries }}
+    - ${{ inputs.label }} 
